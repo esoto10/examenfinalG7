@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 public class GatewayConfig {
 
     @Bean
-    public GlobalFilter exceptionHandlingFilter(ExceptionHandlingFilter exceptionHandlingFilter) {
-        return (GlobalFilter) exceptionHandlingFilter; // Registrar el filtro globalmente
+    public GlobalFilter exceptionHandlingFilter() {
+        return new ExceptionHandlingFilter(); // Registrar el filtro globalmente
     }
 }
